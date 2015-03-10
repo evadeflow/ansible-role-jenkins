@@ -1,0 +1,9 @@
+---
+- name: Create the ssh directory
+  file: state=directory path=/var/lib/jenkins/.ssh/ owner=jenkins group=jenkins mode=0700
+
+- name: Copy ssh known_hosts file
+  copy: src=files/known_hosts dest=/var/lib/jenkins/.ssh/known_hosts owner=jenkins group=jenkins mode=0600
+
+- name: Copy ssh private key file
+  copy: src=files/id_rsa_jenkins dest=/var/lib/jenkins/.ssh/id_rsa owner=jenkins group=jenkins mode=0600 force=yes

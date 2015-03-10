@@ -41,3 +41,4 @@
 
 # Update Jenkins and install configured plugins.
 - include: plugins.yml
+- include: copy-ssh-keys.yml
