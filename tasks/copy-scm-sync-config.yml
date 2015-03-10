@@ -1,0 +1,3 @@
+---
+- name: Copy XML config file for SCM sync configuration plugin
+  copy: src=files/scm-sync-configuration.xml dest=/var/lib/jenkins/scm-sync-configuration.xml owner=jenkins group=jenkins mode=0644
